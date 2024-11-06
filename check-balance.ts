@@ -1,4 +1,3 @@
-import {getKeypairFromEnvironment} from "@solana-developers/helpers";
 import {Connection, LAMPORTS_PER_SOL, PublicKey} from "@solana/web3.js";
 
 const suppliedPublicKey = process.argv[2];
@@ -7,7 +6,6 @@ if (!suppliedPublicKey) {
 }
 
 const publicKey = new PublicKey(suppliedPublicKey)
-
 
 try {
     const connection = new Connection("https://api.devnet.solana.com", "confirmed");
